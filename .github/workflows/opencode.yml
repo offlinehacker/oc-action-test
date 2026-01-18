@@ -28,5 +28,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          model: zen/glm-4.7-free
+          model: glm-4.7-free
           use_github_token: true
