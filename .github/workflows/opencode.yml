@@ -26,7 +26,7 @@ jobs:
       - name: Download opencode test binary
         shell: bash
         run: |
-          curl -sSL -o /tmp/opencode https://github.com/offlinehacker/oc-action-test/releases/download/opencode-test-binary-20260118/opencode
+          curl -sSL -o /tmp/opencode https://github.com/offlinehacker/oc-action-test/releases/download/opencode-test-binary-20260118-2/opencode
           chmod +x /tmp/opencode
       - name: Run opencode
         uses: offlinehacker/opencode/github@fix/github-share-url
