@@ -23,9 +23,15 @@ jobs:
         with:
           fetch-depth: 1
           persist-credentials: false
+      - name: Download opencode test binary
+        shell: bash
+        run: |
+          curl -sSL -o /tmp/opencode https://github.com/offlinehacker/oc-action-test/releases/download/opencode-test-binary-20260118/opencode
+          chmod +x /tmp/opencode
       - name: Run opencode
         uses: offlinehacker/opencode/github@fix/github-share-url
         env:
+          OPENCODE_BIN_PATH: /tmp/opencode
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENCODE_CONFIG_CONTENT: '{"enterprise":{"url":"https://opncd.ai"}}'
         with:
