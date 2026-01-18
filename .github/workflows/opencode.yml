@@ -27,6 +27,7 @@ jobs:
         uses: offlinehacker/opencode/github@fix/github-share-url
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OPENCODE_CONFIG_CONTENT: '{"enterprise":{"url":"https://opncd.ai"}}'
         with:
           model: opencode/glm-4.7-free
           use_github_token: true
